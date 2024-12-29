@@ -1,0 +1,44 @@
+name: "ESP32 HCI Proxy"
+version: "0.0.1"
+slug: "esp32_hci_proxy"
+description: "An ESP32 BLE Proxy"
+url: "https://github.com/BogdanDIA/esp32-hci-proxy-addon"
+stage: experimental
+host_network: true
+host_dbus: true
+# homeassistant_api: true
+privileged: [NET_ADMIN]
+arch:
+  - aarch64
+  - amd64
+hassio_role: homeassistant
+init: false
+map:
+  - share:rw
+startup: services
+options:
+  BTATTACH_DEVICE: ""
+  BTATTACH_BAUD: "921600"
+  SUDPFWD_SERVER: ""
+  SUDPFWD_PORT: "3333"
+  SUDPFWD_HWFLOW: "0"
+  SUDPFWD_FLOWDEBUG: "0"
+  SUDPFWD_DATADEBUG: "0"
+
+schema:
+  BTATTACH_DEVICE: str 
+  BTATTACH_BAUD: str? 
+  SUDPFWD_SERVER: str 
+  SUDPFWD_PORT: "3333"
+  SUDPFWD_HWFLOW: (0,1) 
+  SUDPFWD_FLOWDEBUG: (0,1) 
+  SUDPFWD_DATADEBUG: (0,1) 
+
+  debug: bool?
+
+# ingress: true
+# panel_icon: mdi:forward
+# backup_exclude:
+  # - /data/gnugpg
+  # - /data/password-store
+# hassio_api: true
