@@ -1,3 +1,0 @@
-[submodule "esp32-hci-proxy/app"]
-	path = esp32-hci-proxy/app
-	url = git@github.com:BogdanDIA/serial-udp.git
