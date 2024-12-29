@@ -29,7 +29,7 @@ schema:
   BTATTACH_DEVICE: str 
   BTATTACH_BAUD: str? 
   SUDPFWD_SERVER: str 
-  SUDPFWD_PORT: "int(3333)"
+  SUDPFWD_PORT: "int(1,65535)"
   SUDPFWD_HWFLOW: "int(0,1)" 
   SUDPFWD_FLOWDEBUG: "int(0,1)" 
   SUDPFWD_DATADEBUG: "int(0,1)" 
