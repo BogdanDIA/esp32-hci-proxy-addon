@@ -1,7 +1,7 @@
 name: "ESP32 HCI Proxy"
 version: "0.0.1"
 slug: "esp32_hci_proxy"
-description: "An ESP32 BLE Proxy"
+description: "An ESP32 Bluetooth Proxy"
 url: "https://github.com/BogdanDIA/esp32-hci-proxy-addon"
 stage: experimental
 host_network: true
