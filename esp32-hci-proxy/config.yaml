@@ -17,22 +17,30 @@ map:
   - share:rw
 startup: services
 options:
-  BTATTACH_DEVICE: ""
-  BTATTACH_BAUD: "921600"
-  SUDPFWD_SERVER: ""
-  SUDPFWD_PORT: "3333"
-  SUDPFWD_HWFLOW: "0"
-  SUDPFWD_FLOWDEBUG: "0"
-  SUDPFWD_DATADEBUG: "0"
+  btattach_device: ""
+  btattach_baud: "921600"
+  btattach_protocol: "h4"
+  btattach_hwflow: "0"
+  sudpfwd_device: ""
+  sudpfwd_baud: "921600"
+  sudpfwd_server: ""
+  sudpfwd_port: "3333"
+  sudpfwd_hwflow: "0"
+  sudpfwd_flowdebug: "0"
+  sudpfwd_datadebug: "0"
 
 schema:
-  BTATTACH_DEVICE: str 
-  BTATTACH_BAUD: str? 
-  SUDPFWD_SERVER: str 
-  SUDPFWD_PORT: "int(1,65535)"
-  SUDPFWD_HWFLOW: "int(0,1)" 
-  SUDPFWD_FLOWDEBUG: "int(0,1)" 
-  SUDPFWD_DATADEBUG: "int(0,1)" 
+  btattach_device: str 
+  btattach_baud: str? 
+  btattach_protocol: str?
+  btattach_hwflow: "int(0,1)" 
+  sudpfwd_device: str
+  sudpfwd_baud: str? 
+  sudpfwd_server: str 
+  sudpfwd_port: "int(1024,65535)"
+  sudpfwd_hwflow: "int(0,1)"
+  sudpfwd_flowdebug: "int(0,1)"
+  sudpfwd_datadebug: "int(0,1)"
 
   debug: bool?
 
