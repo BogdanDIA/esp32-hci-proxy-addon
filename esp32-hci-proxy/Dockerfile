@@ -11,9 +11,9 @@ RUN apk add --no-cache git bluez gcc make
 #RUN make
 
 FROM $BUILD_FROM
-COPY --from=builder /app/run.sh /app/
+#COPY --from=builder /app/run.sh /app/
 
-#COPY app /app/
+COPY app /app/
 COPY libproduct.sh /app/
 RUN chmod a+x /app/run.sh
 
