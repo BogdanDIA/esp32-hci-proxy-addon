@@ -16,9 +16,9 @@ function initConfigVariables() {
   fi
 
   if bashio::config.exists 'btattach_protocol'; then
-    export BTATTACH_BAUD="$(bashio::config 'btattach_protocol')"
+    export BTATTACH_PROTOCOL="$(bashio::config 'btattach_protocol')"
   else
-    export BTATTACH_BAUD=""
+    export BTATTACH_PROTOCOL=""
   fi
 
   if bashio::config.exists 'btattach_hwflow'; then
