@@ -15,19 +15,10 @@ function initConfigVariables() {
     export BTATTACH_BAUD=""
   fi
 
-  if bashio::config.exists 'debug'; then
-    export DEBUG="$(bashio::config 'debug')"
-    if [ $DEBUG == "true" ]; then
-      bashio::log.level debug
-    fi
-  else
-    export DEBUG=""
-  fi
-
   if bashio::config.exists 'btattach_protocol'; then
-    export BTATTACH_PROTOCOL="$(bashio::config 'btattach_protocol')"
+    export BTATTACH_BAUD="$(bashio::config 'btattach_protocol')"
   else
-    export BTATTACH_PROTOCOL=""
+    export BTATTACH_BAUD=""
   fi
 
   if bashio::config.exists 'btattach_hwflow'; then
@@ -36,22 +27,43 @@ function initConfigVariables() {
     export BTATTACH_HWFLOW=""
   fi
 
-  if bashio::config.exists 'sudpfwd_baud'; then
-    export SUDPFWD_BAUD ="$(bashio::config 'sudpfwd_baud')"
-  else
-    export SUDPFWD_BAUD =""
+  if bashio::config.exists 'sudpfwd_baud'; then                  
+    export SUDPFWD_BAUD="$(bashio::config 'sudpfwd_baud')"
+  else                                                          
+    export SUDPFWD_BAUD=""                                   
+  fi                 
+
+  if bashio::config.exists 'sudpfwd_port'; then                     
+    export SUDPFWD_PORT="$(bashio::config 'sudpfwd_port')"          
+  else                                                              
+    export SUDPFWD_PORT=""                                          
+  fi 
+
+  if bashio::config.exists 'sudpfwd_hwflow'; then                     
+    export SUDPFWD_HWFLOW="$(bashio::config 'sudpfwd_hwflow')"          
+  else                                                              
+    export SUDPFWD_HWFLOW=""                                          
   fi
 
-  if bashio::config.exists 'sudpfwd_flowdebug'; then
-    export SUDPFWD_FLOWDEBUG ="$(bashio::config 'sudpfwd_flowdebug')"
-  else
-    export SUDPFWD_FLOWDEBUG =""
+  if bashio::config.exists 'sudpfwd_flowdebug'; then                     
+    export SUDPFWD_FLOWDEBUG="$(bashio::config 'sudpfwd_flowdebug')"          
+  else                                                              
+    export SUDPFWD_FLOWDEBUG=""                                          
+  fi    
+
+ if bashio::config.exists 'sudpfwd_datadebug'; then                
+    export SUDPFWD_DATADEBUG="$(bashio::config 'sudpfwd_datadebug')"
+  else                                                              
+    export SUDPFWD_DATADEBUG=""                                     
   fi
 
-  if bashio::config.exists 'sudpfwd_datadebug'; then
-    export SUDPFWD_FLOWDEBUG ="$(bashio::config 'sudpfwd_datadebug')"
+  if bashio::config.exists 'debug'; then
+    export DEBUG="$(bashio::config 'debug')"
+    if [ $DEBUG == "true" ]; then
+      bashio::log.level debug
+    fi
   else
-    export SUDPFWD_FLOWDEBUG =""
+    export DEBUG=""
   fi
 
   # Prevent bashio to complain for "unbound variable"
