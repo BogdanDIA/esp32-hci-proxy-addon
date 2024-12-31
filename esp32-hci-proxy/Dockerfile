@@ -4,10 +4,10 @@ FROM $BUILD_FROM as builder
 RUN apk add --no-cache git gcc make libc-dev
 
 # install serial-udp
-#RUN git clone https://github.com/BogdanDIA/serial-udp.git /serial-udp
-#WORKDIR /serial-udp
+RUN git clone https://github.com/BogdanDIA/serial-udp.git /serial-udp
+WORKDIR /serial-udp
 #RUN git checkout tags/v0.0.1
-#RUN make
+RUN make
 
 FROM $BUILD_FROM
 #COPY --from=builder /app/run.sh /app/
