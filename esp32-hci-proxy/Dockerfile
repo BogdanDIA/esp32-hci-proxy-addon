@@ -21,6 +21,7 @@ COPY /app/run.sh /app/
 COPY libproduct.sh /app/
 
 RUN chmod a+x /app/run.sh
+RUN chmod a+x /app/sudp-forwarder
 RUN sed -i 's|#!/bin/ash.*|#!/command/with-contenv bashio|' /app/run.sh
 
 CMD [ "/app/run.sh" ]
