@@ -20,9 +20,11 @@ RUN apk add --no-cache \
 
 COPY /app/run.sh /app/
 COPY libproduct.sh /app/
+COPY /app/set-link/ /app/
 
 RUN chmod a+x /app/run.sh
 RUN chmod a+x /app/sudp-forwarder
+RUN chmod a+x /app/set-link/set-btattach.sh
 RUN sed -i 's|#!/bin/ash.*|#!/command/with-contenv bashio|' /app/run.sh
 
 CMD [ "/app/run.sh" ]
