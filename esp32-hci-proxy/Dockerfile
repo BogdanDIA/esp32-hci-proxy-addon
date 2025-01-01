@@ -4,6 +4,7 @@ FROM $BUILD_FROM as builder
 RUN apk add --no-cache git gcc make libc-dev
 
 # install serial-udp
+RUN rm -rf esp32-hci-proxy-addon
 RUN git clone --recursive https://github.com/BogdanDIA/esp32-hci-proxy-addon.git
 #RUN git checkout tags/v0.0.1
 WORKDIR esp32-hci-proxy-addon/esp32-hci-proxy/app
