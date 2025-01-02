@@ -14,7 +14,7 @@ RUN make
 RUN rm -rf /vehicle-command
 RUN rm -rf /tesla-ble
 RUN git clone https://github.com/teslamotors/vehicle-command.git /vehicle-command
-RUN git clone https://github.com/BogdanDIA/tesla-ble.git /tesla-ble
+RUN git clone -b ha_addon https://github.com/BogdanDIA/tesla-ble.git /tesla-ble
 # apply patch
 RUN cp /tesla-ble/patches/vehicle-command/device_linux.go /vehicle-command/pkg/connector/ble/
 WORKDIR /vehicle-command
