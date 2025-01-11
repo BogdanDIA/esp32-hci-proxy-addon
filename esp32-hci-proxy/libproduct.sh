@@ -27,7 +27,7 @@ function initConfigVariables() {
     export BLE_BTATTACH_HWFLOW=""
   fi
 
-  if bashio::config.exists 'ble_ble_sudpfwd_baud'; then                  
+  if bashio::config.exists 'ble_sudpfwd_baud'; then                  
     export BLE_SUDPFWD_BAUD="$(bashio::config 'ble_sudpfwd_baud')"
   else                                                          
     export BLE_SUDPFWD_BAUD=""                                   
