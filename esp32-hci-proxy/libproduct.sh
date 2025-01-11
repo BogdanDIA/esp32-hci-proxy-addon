@@ -4,57 +4,57 @@
 function initConfigVariables() {
 
   ### Required Configuration Settings
-  export BTATTACH_DEVICE="$(bashio::config 'btattach_device')"
-  export SUDPFWD_DEVICE="$(bashio::config 'sudpfwd_device')"
-  export SUDPFWD_SERVER="$(bashio::config 'sudpfwd_server')"
+  export BLE_BTATTACH_DEVICE="$(bashio::config 'ble_btattach_device')"
+  export BLE_SUDPFWD_DEVICE="$(bashio::config 'ble_sudpfwd_device')"
+  export BLE_SUDPFWD_SERVER="$(bashio::config 'ble_sudpfwd_server')"
 
   ### Optional Configuration Settings
-  if bashio::config.exists 'btattach_baud'; then
-    export BTATTACH_BAUD="$(bashio::config 'btattach_baud')"
+  if bashio::config.exists 'ble_btattach_baud'; then
+    export BLE_BTATTACH_BAUD="$(bashio::config 'ble_btattach_baud')"
   else
-    export BTATTACH_BAUD=""
+    export BLE_BTATTACH_BAUD=""
   fi
 
   if bashio::config.exists 'btattach_protocol'; then
-    export BTATTACH_PROTOCOL="$(bashio::config 'btattach_protocol')"
+    export BLE_BTATTACH_PROTOCOL="$(bashio::config 'ble_btattach_protocol')"
   else
-    export BTATTACH_PROTOCOL=""
+    export BLE_BTATTACH_PROTOCOL=""
   fi
 
   if bashio::config.exists 'btattach_hwflow'; then
-    export BTATTACH_HWFLOW="$(bashio::config 'btattach_hwflow')"
+    export BLE_BTATTACH_HWFLOW="$(bashio::config 'ble_btattach_hwflow')"
   else
-    export BTATTACH_HWFLOW=""
+    export BLE_BTATTACH_HWFLOW=""
   fi
 
-  if bashio::config.exists 'sudpfwd_baud'; then                  
-    export SUDPFWD_BAUD="$(bashio::config 'sudpfwd_baud')"
+  if bashio::config.exists 'ble_sudpfwd_baud'; then                  
+    export BLE_SUDPFWD_BAUD="$(bashio::config 'ble_sudpfwd_baud')"
   else                                                          
-    export SUDPFWD_BAUD=""                                   
+    export BLE_SUDPFWD_BAUD=""                                   
   fi                 
 
   if bashio::config.exists 'sudpfwd_port'; then                     
-    export SUDPFWD_PORT="$(bashio::config 'sudpfwd_port')"          
+    export BLE_SUDPFWD_PORT="$(bashio::config 'ble_sudpfwd_port')"          
   else                                                              
-    export SUDPFWD_PORT=""                                          
+    export BLE_SUDPFWD_PORT=""                                          
   fi 
 
-  if bashio::config.exists 'sudpfwd_hwflow'; then                     
-    export SUDPFWD_HWFLOW="$(bashio::config 'sudpfwd_hwflow')"          
+  if bashio::config.exists 'ble_sudpfwd_hwflow'; then                     
+    export BLE_SUDPFWD_HWFLOW="$(bashio::config 'ble_sudpfwd_hwflow')"          
   else                                                              
-    export SUDPFWD_HWFLOW=""                                          
+    export BLE_SUDPFWD_HWFLOW=""                                          
   fi
 
-  if bashio::config.exists 'sudpfwd_flowdebug'; then                     
-    export SUDPFWD_FLOWDEBUG="$(bashio::config 'sudpfwd_flowdebug')"          
+  if bashio::config.exists 'ble_sudpfwd_flowdebug'; then                     
+    export BLE_SUDPFWD_FLOWDEBUG="$(bashio::config 'ble_sudpfwd_flowdebug')"          
   else                                                              
-    export SUDPFWD_FLOWDEBUG=""                                          
+    export BLE_SUDPFWD_FLOWDEBUG=""                                          
   fi    
 
- if bashio::config.exists 'sudpfwd_datadebug'; then                
-    export SUDPFWD_DATADEBUG="$(bashio::config 'sudpfwd_datadebug')"
+ if bashio::config.exists 'ble_sudpfwd_datadebug'; then                
+    export BLE_SUDPFWD_DATADEBUG="$(bashio::config 'ble_sudpfwd_datadebug')"
   else                                                              
-    export SUDPFWD_DATADEBUG=""                                     
+    export BLE_SUDPFWD_DATADEBUG=""                                     
   fi
 
   if bashio::config.exists 'debug'; then
