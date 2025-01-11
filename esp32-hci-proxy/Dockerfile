@@ -18,6 +18,7 @@ RUN apk add --no-cache \
 
 COPY run.sh /app/
 COPY libproduct.sh /app/
+COPY /app/set-link/log-def.sh /app/set-link/
 COPY /app/set-link/serial-udp.conf /app/set-link/
 COPY /app/set-link/set-btattach.sh /app/set-link/
 COPY /app/set-link/set-udp.sh /app/set-link/
