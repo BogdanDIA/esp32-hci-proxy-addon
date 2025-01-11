@@ -18,30 +18,30 @@ map:
   - share:rw
 startup: services
 options:
-  btattach_device: ""
-  btattach_baud: "921600"
-  btattach_protocol: "h4"
-  btattach_hwflow: "0"
-  sudpfwd_device: ""
-  sudpfwd_baud: "921600"
-  sudpfwd_server: ""
-  sudpfwd_port: "3333"
-  sudpfwd_hwflow: "0"
-  sudpfwd_flowdebug: "0"
-  sudpfwd_datadebug: "0"
+  ble_btattach_device: ""
+  ble_btattach_baud: "921600"
+  ble_btattach_protocol: "h4"
+  ble_btattach_hwflow: "0"
+  ble_sudpfwd_device: ""
+  ble_sudpfwd_baud: "921600"
+  ble_sudpfwd_server: ""
+  ble_sudpfwd_port: "3333"
+  ble_sudpfwd_hwflow: "0"
+  ble_sudpfwd_flowdebug: "0"
+  ble_sudpfwd_datadebug: "0"
 
 schema:
-  btattach_device: str 
-  btattach_baud: str? 
-  btattach_protocol: str?
-  btattach_hwflow: "int(0,1)" 
-  sudpfwd_device: str
-  sudpfwd_baud: str? 
-  sudpfwd_server: str 
-  sudpfwd_port: "int(1024,65535)"
-  sudpfwd_hwflow: "int(0,1)"
-  sudpfwd_flowdebug: "int(0,1)"
-  sudpfwd_datadebug: "int(0,1)"
+  ble_btattach_device: str 
+  ble_btattach_baud: str? 
+  ble_btattach_protocol: str?
+  ble_btattach_hwflow: "int(0,1)" 
+  ble_sudpfwd_device: str
+  ble_sudpfwd_baud: str? 
+  ble_sudpfwd_server: str 
+  ble_sudpfwd_port: "int(1024,65535)"
+  ble_sudpfwd_hwflow: "int(0,1)"
+  ble_sudpfwd_flowdebug: "int(0,1)"
+  ble_sudpfwd_datadebug: "int(0,1)"
 
   debug: bool?
 
