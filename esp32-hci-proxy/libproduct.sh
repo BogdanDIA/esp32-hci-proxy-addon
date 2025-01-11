@@ -15,25 +15,25 @@ function initConfigVariables() {
     export BLE_BTATTACH_BAUD=""
   fi
 
-  if bashio::config.exists 'btattach_protocol'; then
+  if bashio::config.exists 'ble_btattach_protocol'; then
     export BLE_BTATTACH_PROTOCOL="$(bashio::config 'ble_btattach_protocol')"
   else
     export BLE_BTATTACH_PROTOCOL=""
   fi
 
-  if bashio::config.exists 'btattach_hwflow'; then
+  if bashio::config.exists 'ble_btattach_hwflow'; then
     export BLE_BTATTACH_HWFLOW="$(bashio::config 'ble_btattach_hwflow')"
   else
     export BLE_BTATTACH_HWFLOW=""
   fi
 
-  if bashio::config.exists 'ble_sudpfwd_baud'; then                  
+  if bashio::config.exists 'ble_ble_sudpfwd_baud'; then                  
     export BLE_SUDPFWD_BAUD="$(bashio::config 'ble_sudpfwd_baud')"
   else                                                          
     export BLE_SUDPFWD_BAUD=""                                   
   fi                 
 
-  if bashio::config.exists 'sudpfwd_port'; then                     
+  if bashio::config.exists 'ble_sudpfwd_port'; then                     
     export BLE_SUDPFWD_PORT="$(bashio::config 'ble_sudpfwd_port')"          
   else                                                              
     export BLE_SUDPFWD_PORT=""                                          
