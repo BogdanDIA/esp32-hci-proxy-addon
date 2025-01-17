@@ -14,6 +14,8 @@ else
   log_debug "debug_tests mode enabled"
   log_debug "Starting sudpforwarder"
   /app/set-link/set-udp.sh &
+  sleep 2
+  log_debug "Starting run-test"
   log_debug "$(/app/set-link/run-test.sh)"
 fi
 
