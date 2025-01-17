@@ -4,7 +4,7 @@
 
 log_info "Entering main loop..."
 
-if [[ ! $DEBUG_TESTS ]]; then
+if [[ $DEBUG_TESTS -eq "false" ]]; then
   log_info "Starting btattach"
   ./app/set-link/set-btattach.sh &
 
