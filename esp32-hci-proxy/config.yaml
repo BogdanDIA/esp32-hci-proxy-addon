@@ -43,6 +43,7 @@ schema:
   ble_sudpfwd_flowdebug: "int(0,1)"
   ble_sudpfwd_datadebug: "int(0,1)"
 
+  debug: debug_tests?
   debug: bool?
 
 # ingress: true

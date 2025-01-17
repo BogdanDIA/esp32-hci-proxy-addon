@@ -51,10 +51,16 @@ function initConfigVariables() {
     export BLE_SUDPFWD_FLOWDEBUG=""                                          
   fi    
 
- if bashio::config.exists 'ble_sudpfwd_datadebug'; then                
+  if bashio::config.exists 'ble_sudpfwd_datadebug'; then                
     export BLE_SUDPFWD_DATADEBUG="$(bashio::config 'ble_sudpfwd_datadebug')"
   else                                                              
     export BLE_SUDPFWD_DATADEBUG=""                                     
+  fi
+
+  if bashio::config.exists 'debug_tests'; then
+    export DEBUG_TESTS="$(bashio::config 'debug_tests')"
+  else
+    export DEBUG_TESTS=""
   fi
 
   if bashio::config.exists 'debug'; then
