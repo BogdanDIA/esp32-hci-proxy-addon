@@ -6,14 +6,15 @@ log_info "Entering main loop..."
 
 if [[ $DEBUG_TESTS == "false" ]]; then
   log_info "Starting btattach"
-  ./app/set-link/set-btattach.sh &
+  /app/set-link/set-btattach.sh &
 
   log_info "Starting sudpforwarder"
-  ./app/set-link/set-udp.sh &
+  /app/set-link/set-udp.sh &
 else
   log_debug "debug_tests mode enabled"
   log_debug "Starting sudpforwarder"
-  ./app/set-link/set-udp.sh &
+  /app/set-link/set-udp.sh &
+  log_debug "$(/app/set-link/run-test.sh)"
 fi
 
 while :; do
