@@ -5,9 +5,10 @@ RUN apk add --no-cache git gcc make libc-dev
 
 # install serial-udp
 COPY app /app/
+COPY app/tests/ /app/tests/
 WORKDIR app
 RUN make
-WORKDIR app/tests
+WORKDIR /app/tests/
 RUN make
 
 FROM $BUILD_FROM
