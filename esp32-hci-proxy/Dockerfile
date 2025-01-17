@@ -32,7 +32,7 @@ RUN chmod a+x /app/run.sh
 RUN chmod a+x /app/sudp-forwarder
 RUN chmod a+x /app/set-link/set-btattach.sh
 RUN chmod a+x /app/set-link/set-udp.sh
-RUN chmod a+x /app/set-link/set-test.sh
+RUN chmod a+x /app/set-link/run-test.sh
 RUN sed -i 's|#!/bin/ash.*|#!/command/with-contenv bashio|' /app/run.sh
 
 CMD [ "/app/run.sh" ]
