@@ -10,6 +10,8 @@ if [[ ! $DEBUG_TESTS ]]; then
 
   log_info "Starting sudpforwarder"
   ./app/set-link/set-udp.sh &
+else
+  log_debug "debug_tests mode enabled"
 fi
 
 while :; do
