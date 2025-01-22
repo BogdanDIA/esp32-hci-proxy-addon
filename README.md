@@ -1,6 +1,6 @@
 # ESP32 HCI Proxy Addon 
 
-- This package [esp32-hci-proxy](https://github.com/BogdanDIA/esp32-hci-proxy-addon/esp32-hci-proxy) makes available virtual BT controllers on HomeAssistant host by using ESP32 HW.
+- This addon [esp32-hci-proxy] is based on [serial-udp](https://github.com/BogdanDIA/serial-udp) and makes available virtual BT controllers on HomeAssistant host by using ESP32 microcontrollers.
 
 [![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https://github.com/BogdanDIA/esp32-hci-proxy-addon)
 
