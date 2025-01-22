@@ -73,4 +73,4 @@ Controller E4:5F:01:F5:FE:37 homeassistant
 ```
 
 ## ESP32 setup 
-This is explayned here: https://github.com/BogdanDIA/esp32-hci-proxy-target.git
+This is explained here: https://github.com/BogdanDIA/esp32-hci-proxy-target.git
