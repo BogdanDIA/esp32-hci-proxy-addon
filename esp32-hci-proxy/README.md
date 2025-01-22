@@ -59,11 +59,6 @@ hci0:	Type: Primary  Bus: UART
 ```
 When <b>UP RUNNING</b> is seen on the last added controller (hci1 in ourt case), everything is working as expected. The BD address is the MAC address of the ESP32 and it can be seen in ESP32's serial console upon boot.
 
-The controller will show up in HA integration page as in the picture:
-```
-<img aling="center" src='./app/pictures/show_ha_controller.png' width=40%>
-```
-
 From HA ssh addon console user could execute `bluetoothctl` and use it:
 ```
 [bluetooth]# list
