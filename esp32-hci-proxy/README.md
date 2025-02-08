@@ -5,13 +5,11 @@ An experimental project aiming at creating virtual Bluetooth Controllers using r
 
 ## HW Installation
 ### Serial port loopback with external adapters
-For this option, two USB-to-Serial adapters should be plugged into the host. An USB2.0 hub can be used in case not enough USB ports are available on the system. On the physical layer side a null modem connection should be done bwetween the two adapters, three wires are needed plus additional 2 wires if HW flow control is to be used:
+For this option, two USB-to-Serial adapters (I am using CP2102) should be plugged into the host. An USB2.0 hub can be used in case not enough USB ports are available on the system. On the physical layer side a null modem connection should be done bwetween the two adapters, three wires are needed plus additional 2 wires if HW flow control is to be used:
 ```
 TX<->RX
 RX<->TX
-GND<->GND <-this is not reall necessary
-
-and if HW flow control is used:
+and if HW flow control is used(recommended):
 RTS<->CTS
 CTS<->RTS
 ```
@@ -33,12 +31,12 @@ Not mandatory - debug options
 ```
 
 Identifying the serial ports could be done easily using HA ssh addon to list `/dev/serial/by-path/` directory
-```
+<pre>
 cd /dev/serial/by-path
 ls -al
 lrwxrwxrwx 1 root root  13 Sep 14 21:24 <b>platform-xhci-hcd.0-usb-0:2:1.0-port0</b> -> ../../ttyUSB0
 lrwxrwxrwx 1 root root  13 Sep 14 21:24 <b>platform-xhci-hcd.1-usb-0:2:1.0-port0</b> -> ../../ttyUSB1
-```
+</pre>
 
 If HA ssh addon is not available, user can build and subsequenty run first time the addon with only `debug switch` configuration enabled. The log will show the list of the serial ports existing on the system.
 
