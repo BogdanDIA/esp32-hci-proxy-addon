@@ -55,7 +55,7 @@ hci0:	Type: Primary  Bus: UART
 	RX bytes:7213 acl:0 sco:0 events:592 errors:0
 	TX bytes:69142 acl:0 sco:0 commands:561 errors:0
 </pre>
-When <b>UP RUNNING</b> is seen on the last added controller (hci1 in ourt case), everything is working as expected. The BD address is the MAC address of the ESP32 and it can be seen in ESP's serial console upon boot.
+When <b>UP RUNNING</b> is seen on the last added controller (hci1 in our case), everything is working as expected. The BD address is the MAC address of the ESP32 and it can be seen in ESP's serial console upon boot.
 
 From HA ssh addon console user could execute `bluetoothctl` and use it:
 ```
