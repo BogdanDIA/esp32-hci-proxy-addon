@@ -47,7 +47,7 @@ Once addon is configured and built, run the addon. When `debug switch` is enable
 ```
 hci1:	Type: Primary  Bus: UART
 	BD Address: 08:3A:F2:13:35:C2  ACL MTU: 1021:9  SCO MTU: 255:4
-	<b>UP RUNNING</b>
+	**UP RUNNING**
 	RX bytes:7809687 acl:0 sco:0 events:369222 errors:0
 	TX bytes:5040449 acl:26036 sco:0 commands:292446 errors:0
 
