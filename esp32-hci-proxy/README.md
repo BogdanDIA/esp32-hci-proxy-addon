@@ -44,10 +44,10 @@ If HA ssh addon is not available, user can build and subsequenty run first time 
 
 Once addon is configured and built, run the addon. When `debug switch` is enabled, user would see the list of BT controllers existing in the system.
 
-```
+<pre>
 hci1:	Type: Primary  Bus: UART
 	BD Address: 08:3A:F2:13:35:C2  ACL MTU: 1021:9  SCO MTU: 255:4
-	**UP RUNNING**
+	<b>UP RUNNING</b>
 	RX bytes:7809687 acl:0 sco:0 events:369222 errors:0
 	TX bytes:5040449 acl:26036 sco:0 commands:292446 errors:0
 
@@ -56,7 +56,7 @@ hci0:	Type: Primary  Bus: UART
 	UP RUNNING 
 	RX bytes:7213 acl:0 sco:0 events:592 errors:0
 	TX bytes:69142 acl:0 sco:0 commands:561 errors:0
-```
+</pre>
 When <b>UP RUNNING</b> is seen on the last added controller (hci1 in ourt case), everything is working as expected. The BD address is the MAC address of the ESP32 and it can be seen in ESP's serial console upon boot.
 
 From HA ssh addon console user could execute `bluetoothctl` and use it:
