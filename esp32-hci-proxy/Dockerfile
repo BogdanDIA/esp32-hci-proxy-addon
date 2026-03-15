@@ -21,20 +21,20 @@ RUN apk add --no-cache \
   bluez-deprecated
 
 COPY run.sh /app/
-COPY run-observer.sh /app/
 COPY libproduct.sh /app/
 COPY /app/set-link/log-def.sh /app/set-link/
 COPY /app/set-link/serial-udp.conf /app/set-link/
 COPY /app/set-link/set-btattach.sh /app/set-link/
 COPY /app/set-link/set-udp.sh /app/set-link/
 COPY /app/set-link/run-test.sh /app/set-link/
+COPY /app/set-link/run-observer.sh /app/set-link/
 
 RUN chmod a+x /app/run.sh
-RUN chmod a+x /app/run-observer.sh
 RUN chmod a+x /app/sudp-forwarder
 RUN chmod a+x /app/set-link/set-btattach.sh
 RUN chmod a+x /app/set-link/set-udp.sh
 RUN chmod a+x /app/set-link/run-test.sh
+RUN chmod a+x /app/set-link/run-observer.sh
 RUN sed -i 's|#!/bin/ash.*|#!/command/with-contenv bashio|' /app/run.sh
 
 CMD [ "/app/run.sh" ]
