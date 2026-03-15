@@ -10,6 +10,7 @@ while :; do
   #kill btattach after a number or tries                                                                  
   if [[ $HCINUM -ge 0 ]]; then
     res=$(hciconfig hci${HCINUM} | grep DOWN)
+    echo res: $res
     if [[ -n $res ]]; then                   
       echo "trying up: hci$HCINUM"      
       hciconfig hci${HCINUM} up        
@@ -18,7 +19,9 @@ while :; do
       if [[ $DOWN_COUNT -ge 6 ]]; then   
         echo "killing btattach"    
         killall -SIGKILL btattach           
-      fi                             
+      else
+        DOWN_COUNT=0
+      fi                   
     fi
   fi
   sleep 20
