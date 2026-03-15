@@ -1,8 +1,5 @@
-#!/bin/ash -e
+#!/bin/ash
 
-. /app/libproduct.sh
-
-log_info "Entering run-observer loop..."
 while :; do
   HCINUM=$(hciconfig | grep hci | wc -l)
   HCINUM=$(($HCINUM-1))                 
@@ -14,16 +11,15 @@ while :; do
   if [[ $HCINUM -ge 0 ]]; then
     res=$(hciconfig hci${HCINUM} | grep DOWN)
     if [[ -n $res ]]; then                   
-      log_debug "trying up: hci$HCINUM"      
+      echo "trying up: hci$HCINUM"      
       hciconfig hci${HCINUM} up        
       DOWN_COUNT=$(($DOWN_COUNT+1))    
-      log_debug "DOWN_COUNT: $DOWN_COUNT"
+      echo "DOWN_COUNT: $DOWN_COUNT"
       if [[ $DOWN_COUNT -ge 6 ]]; then   
-        log_debug: "killing btattach"    
+        echo "killing btattach"    
         #killall -9 btattach           
       fi                             
-    fi  
-  fi  
-  
+    fi
+  fi
   sleep 60
 done
