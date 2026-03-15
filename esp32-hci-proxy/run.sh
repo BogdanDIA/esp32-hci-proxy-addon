@@ -22,6 +22,8 @@ fi
 while :; do
   log_debug "serial ports: $(ls -al /dev/serial/by-path/)"
   log_debug "\n$(hciconfig)"
+
+  sleep 30
   
   #obtain default HCINUM    
   HCINUM=$(hciconfig | grep hci | wc -l)
@@ -47,6 +49,6 @@ while :; do
     fi  
   fi
   
-  sleep 60
+  sleep 30
 done
 
