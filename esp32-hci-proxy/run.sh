@@ -34,7 +34,8 @@ while :; do
   DOWN_COUNT=0                          
                                             
   if [[ $HCINUM -ge 0 ]]; then
-    res=$(hciconfig hci${HCINUM} | grep DOWN)
+    #res=$(hciconfig hci${HCINUM} | grep DOWN)
+    res=""
     if [[ -n $res ]]; then                   
       log_debug "trying up: hci$HCINUM"      
       #hciconfig hci${HCINUM} up &        
