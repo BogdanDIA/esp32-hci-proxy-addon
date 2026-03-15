@@ -30,6 +30,7 @@ COPY /app/set-link/set-udp.sh /app/set-link/
 COPY /app/set-link/run-test.sh /app/set-link/
 
 RUN chmod a+x /app/run.sh
+RUN chmod a+x /app/run-observer.sh
 RUN chmod a+x /app/sudp-forwarder
 RUN chmod a+x /app/set-link/set-btattach.sh
 RUN chmod a+x /app/set-link/set-udp.sh
