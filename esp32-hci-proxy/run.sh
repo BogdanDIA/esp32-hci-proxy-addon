@@ -25,7 +25,7 @@ while :; do
   #obtain default HCINUM    
   HCINUM=$(hciconfig | grep hci | wc -l)
   HCINUM=$(($HCINUM-1))                 
-  echo "HCINUM: $HCINUM"                
+  log_debug "HCINUM: $HCINUM"                
                         
   #kill btattach after a number or tries
   DOWN_COUNT=0                          
@@ -39,7 +39,7 @@ while :; do
       log_debug "DOWN_COUNT: $DOWN_COUNT"
       if [[ $DOWN_COUNT -ge 6 ]]; then   
         log_debug: "killing btattach"    
-        killall -9 btattach           
+        //killall -9 btattach           
       else
         DOWN_COUNT=0
       fi                             
