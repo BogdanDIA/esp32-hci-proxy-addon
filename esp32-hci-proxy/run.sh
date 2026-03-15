@@ -40,6 +40,8 @@ while :; do
       if [[ $DOWN_COUNT -ge 6 ]]; then   
         log_debug: "killing btattach"    
         killall -9 btattach           
+      else
+        DOWN_COUNT=0
       fi                             
     fi  
   fi  
