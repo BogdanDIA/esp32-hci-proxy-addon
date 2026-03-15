@@ -10,6 +10,9 @@ if [[ $DEBUG_TESTS == "false" ]]; then
 
   log_info "Starting sudpforwarder"
   /app/set-link/set-udp.sh &
+
+  log_info "Starting run-observer"
+  /app/run-observer.sh &
 else
   log_debug "debug_tests mode enabled"
   log_debug "Starting sudpforwarder"
