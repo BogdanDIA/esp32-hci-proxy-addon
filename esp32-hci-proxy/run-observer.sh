@@ -1,13 +1,13 @@
 #!/bin/ash
 
+DOWN_COUNT=0
+
 while :; do
   HCINUM=$(hciconfig | grep hci | wc -l)
   HCINUM=$(($HCINUM-1))                 
   echo "HCINUM: $HCINUM"                
                         
-  #kill btattach after a number or tries
-  DOWN_COUNT=0                          
-                                            
+  #kill btattach after a number or tries                                                                  
   if [[ $HCINUM -ge 0 ]]; then
     res=$(hciconfig hci${HCINUM} | grep DOWN)
     if [[ -n $res ]]; then                   
@@ -17,9 +17,9 @@ while :; do
       echo "DOWN_COUNT: $DOWN_COUNT"
       if [[ $DOWN_COUNT -ge 6 ]]; then   
         echo "killing btattach"    
-        #killall -9 btattach           
+        killall -SIGKILL btattach           
       fi                             
     fi
   fi
-  sleep 60
+  sleep 20
 done
