@@ -21,6 +21,7 @@ RUN apk add --no-cache \
   bluez-deprecated
 
 COPY run.sh /app/
+COPY run-observer.sh /app/
 COPY libproduct.sh /app/
 COPY /app/set-link/log-def.sh /app/set-link/
 COPY /app/set-link/serial-udp.conf /app/set-link/
