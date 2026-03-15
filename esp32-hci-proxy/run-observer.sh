@@ -11,7 +11,7 @@ while :; do
   if [[ $HCINUM -ge 0 ]]; then
     res=$(hciconfig hci${HCINUM} | grep DOWN)
     echo res: $res
-    if [[ -n $res ]]; then                   
+    if [[ -z $res ]]; then                   
       echo "trying up: hci$HCINUM"      
       hciconfig hci${HCINUM} up        
       DOWN_COUNT=$(($DOWN_COUNT+1))    
