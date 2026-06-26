@@ -1,5 +1,4 @@
-ARG BUILD_FROM
-FROM $BUILD_FROM as builder
+FROM ghcr.io/home-assistant/base:latest as builder
 
 RUN apk add --no-cache git gcc make libc-dev
 
