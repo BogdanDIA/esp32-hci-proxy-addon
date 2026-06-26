@@ -10,6 +10,8 @@ RUN make
 WORKDIR /app/tests/
 RUN make
 
+FROM ghcr.io/home-assistant/base:latest
+
 COPY --from=builder /app/sudp-forwarder /app/
 COPY --from=builder /app/tests/ /app/tests/
 
