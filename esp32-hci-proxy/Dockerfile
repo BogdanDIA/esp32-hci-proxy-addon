@@ -10,7 +10,6 @@ RUN make
 WORKDIR /app/tests/
 RUN make
 
-FROM $BUILD_FROM
 COPY --from=builder /app/sudp-forwarder /app/
 COPY --from=builder /app/tests/ /app/tests/
 
